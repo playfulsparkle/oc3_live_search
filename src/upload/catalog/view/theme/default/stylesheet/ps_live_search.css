@@ -38,6 +38,8 @@
 
 .ps-live-search-list .ps-live-search-item .thumb {
     float: left;
+    width: 23%;
+    text-align: center;
     margin-right: 1em;
 }
 
@@ -51,12 +53,13 @@
 }
 
 .ps-live-search-list .ps-live-search-item .info {
-    width: 66%;
-    display: inline-block;
+    float: left;
+    width: 49%;
 }
 
 .ps-live-search-list .ps-live-search-item .prices {
     float: right;
+    width: 17%;
     margin-left: 1em;
     text-align: right;
 }

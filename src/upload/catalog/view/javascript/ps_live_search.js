@@ -113,7 +113,7 @@
       };
 
       this.showDropdown = function () {
-        $dropdown.html('<li><span class="ps-live-search-item-loading"><i class="fa-solid fa-circle-notch fa-spin"></i></span></li>');
+        $dropdown.html('<li><span class="ps-live-search-item-loading"><i class="fa fa-circle-notch fa-spin"></i></span></li>');
         $dropdown.addClass("show");
         $(element).attr("aria-expanded", "true");
         currentIndex = -1;
@@ -143,7 +143,7 @@
             for (var product of json.products.data) {
               html += '<li><a href="' + product.href + '" class="ps-live-search-item">';
               if (product.thumb) {
-                html += '<img class="thumb" src="' + product.thumb + '" alt="' + product.name + '" width="' + product.thumb_width + '" height="' + product.thumb_height + '">';
+                html += '<span class="thumb"><img src="' + product.thumb + '" alt="' + product.name + '" width="' + product.thumb_width + '" height="' + product.thumb_height + '"></span>';
               }
               html += '<span class="info"><strong class="name">' + product.name + '</strong>';
               if (product.description) {
@@ -170,7 +170,7 @@
             for (var category of json.categories.data) {
               html += '<li><a href="' + category.href + '" class="ps-live-search-item">';
               if (category.thumb) {
-                html += '<img class="thumb" src="' + category.thumb + '" alt="' + category.name + '" width="' + category.thumb_width + '" height="' + category.thumb_height + '">';
+                html += '<span class="thumb"><img src="' + category.thumb + '" alt="' + category.name + '" width="' + category.thumb_width + '" height="' + category.thumb_height + '"></span>';
               }
               html += '<span class="info"><span class="name">' + category.name + '</span></span></a></li>';
             }
@@ -186,7 +186,7 @@
             for (var manufacturer of json.manufacturers.data) {
               html += '<li><a href="' + manufacturer.href + '" class="ps-live-search-item">';
               if (manufacturer.thumb) {
-                html += '<img class="thumb" src="' + manufacturer.thumb + '" alt="' + manufacturer.name + '" width="' + manufacturer.thumb_width + '" height="' + manufacturer.thumb_height + '">';
+                html += '<span class="thumb"><img src="' + manufacturer.thumb + '" alt="' + manufacturer.name + '" width="' + manufacturer.thumb_width + '" height="' + manufacturer.thumb_height + '"></span>';
               }
               html += '<span class="info"><span class="name">' + manufacturer.name + '</span></span></a></li>';
             }
@@ -208,9 +208,9 @@
         }
 
         if (json.products.status && json.products.data.length > 0) {
-          html += '<li><a href="' + url_more + '" class="ps-live-search-more">' + this.translations.text_all_results + ' <i class="fa-solid fa-caret-down"></i></a></li>';
+          html += '<li><a href="' + url_more + '" class="ps-live-search-more">' + this.translations.text_all_results + ' <i class="fa fa-caret-down"></i></a></li>';
         } else {
-          html += '<li><span class="ps-live-search-more">' + this.translations.text_all_results + ' <i class="fa-solid fa-caret-down"></i></span></li>';
+          html += '<li><span class="ps-live-search-more">' + this.translations.text_all_results + ' <i class="fa fa-caret-down"></i></span></li>';
         }
 
         $dropdown.html(html);

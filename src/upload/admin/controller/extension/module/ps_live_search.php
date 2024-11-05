@@ -41,6 +41,12 @@ class ControllerExtensionModulePsLiveSearch extends Controller
             $data['error_input_delay'] = '';
         }
 
+        if (isset($this->error['input_min_chars'])) {
+            $data['error_input_min_chars'] = $this->error['input_min_chars'];
+        } else {
+            $data['error_input_min_chars'] = '';
+        }
+
         if (isset($this->error['product_description_length'])) {
             $data['error_product_description_length'] = $this->error['product_description_length'];
         } else {
@@ -114,6 +120,12 @@ class ControllerExtensionModulePsLiveSearch extends Controller
             $data['module_ps_live_search_input_delay'] = $this->request->post['module_ps_live_search_input_delay'];
         } else {
             $data['module_ps_live_search_input_delay'] = $this->config->get('module_ps_live_search_input_delay');
+        }
+
+        if (isset($this->request->post['module_ps_live_search_input_min_chars'])) {
+            $data['module_ps_live_search_input_min_chars'] = $this->request->post['module_ps_live_search_input_min_chars'];
+        } else {
+            $data['module_ps_live_search_input_min_chars'] = $this->config->get('module_ps_live_search_input_min_chars');
         }
 
         if (isset($this->request->post['module_ps_live_search_product_status'])) {
@@ -226,6 +238,10 @@ class ControllerExtensionModulePsLiveSearch extends Controller
                 $this->error['input_delay'] = $this->language->get('error_input_delay_min');
             }
 
+            if ((int) $this->request->post['module_ps_live_search_input_min_chars'] < 1) {
+                $this->error['input_min_chars'] = $this->language->get('error_input_min_chars');
+            }
+
             if ((int) $this->request->post['module_ps_live_search_product_description_length'] < 0) {
                 $this->error['product_description_length'] = $this->language->get('error_product_description_length_min');
             } else if ((int) $this->request->post['module_ps_live_search_product_description_length'] > 200) {
@@ -278,6 +294,7 @@ class ControllerExtensionModulePsLiveSearch extends Controller
 
         $data = array(
             'module_ps_live_search_input_delay' => 100,
+            'module_ps_live_search_input_min_chars' => 1,
             'module_ps_live_search_product_status' => 1,
             'module_ps_live_search_product_description' => 1,
             'module_ps_live_search_product_description_length' => 100,

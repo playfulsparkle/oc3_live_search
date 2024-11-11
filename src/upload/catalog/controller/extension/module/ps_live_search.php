@@ -4,22 +4,22 @@ class ControllerExtensionModulePsLiveSearch extends Controller
     public function autocomplete()
     {
         $json = array(
-            'products' => [
+            'products' => array(
                 'status' => (bool) $this->config->get('module_ps_live_search_product_status'),
                 'data' => array()
-            ],
-            'categories' => [
+            ),
+            'categories' => array(
                 'status' => (bool) $this->config->get('module_ps_live_search_category_status'),
                 'data' => array()
-            ],
-            'manufacturers' => [
+            ),
+            'manufacturers' => array(
                 'status' => (bool) $this->config->get('module_ps_live_search_manufacturer_status'),
                 'data' => array()
-            ],
-            'informations' => [
+            ),
+            'informations' => array(
                 'status' => (bool) $this->config->get('module_ps_live_search_information_status'),
                 'data' => array()
-            ],
+            ),
         );
 
         if (isset($this->request->get['search'])) {
@@ -65,7 +65,7 @@ class ControllerExtensionModulePsLiveSearch extends Controller
                     $description = '';
                 }
 
-                $json['products']['data'][] = [
+                $json['products']['data'][] = array(
                     'href' => str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $productResult['product_id'])),
                     'name' => strip_tags($productResult['name']),
                     'description' => $description,
@@ -75,7 +75,7 @@ class ControllerExtensionModulePsLiveSearch extends Controller
                     'thumb' => $thumb,
                     'thumb_width' => $this->config->get('module_ps_live_search_product_image_width'),
                     'thumb_height' => $this->config->get('module_ps_live_search_product_image_height'),
-                ];
+                );
             }
         }
 
@@ -89,7 +89,7 @@ class ControllerExtensionModulePsLiveSearch extends Controller
                     $thumb = '';
                 }
 
-                $name = [$categoryResult['names']];
+                $name = array($categoryResult['names']);
 
                 if ($categoryResult['name']) {
                     $name[] = $categoryResult['name'];
@@ -97,13 +97,13 @@ class ControllerExtensionModulePsLiveSearch extends Controller
 
                 $paths = array_filter([$categoryResult['paths'], $categoryResult['category_id']]);
 
-                $json['categories']['data'][] = [
+                $json['categories']['data'][] = array(
                     'href' => str_replace('&amp;', '&', $this->url->link('product/category', 'path=' . implode('_', $paths))),
                     'name' => implode(' > ', array_filter($name)),
                     'thumb' => $thumb,
                     'thumb_width' => $this->config->get('module_ps_live_search_category_image_width'),
                     'thumb_height' => $this->config->get('module_ps_live_search_category_image_height'),
-                ];
+                );
             }
         }
 
@@ -118,13 +118,13 @@ class ControllerExtensionModulePsLiveSearch extends Controller
                     $thumb = '';
                 }
 
-                $json['manufacturers']['data'][] = [
+                $json['manufacturers']['data'][] = array(
                     'href' => str_replace('&amp;', '&', $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $manufacturerResult['manufacturer_id'])),
                     'name' => $manufacturerResult['name'],
                     'thumb' => $thumb,
                     'thumb_width' => $this->config->get('module_ps_live_search_manufacturer_image_width'),
                     'thumb_height' => $this->config->get('module_ps_live_search_manufacturer_image_height'),
-                ];
+                );
             }
         }
 
@@ -132,10 +132,10 @@ class ControllerExtensionModulePsLiveSearch extends Controller
             $informationResults = $this->model_extension_module_ps_live_search->getInformations($search);
 
             foreach ($informationResults as $informationResult) {
-                $json['informations']['data'][] = [
+                $json['informations']['data'][] = array(
                     'href' => str_replace('&amp;', '&', $this->url->link('information/information', 'information_id=' . $informationResult['information_id'])),
                     'name' => $informationResult['title']
-                ];
+                );
             }
         }
 

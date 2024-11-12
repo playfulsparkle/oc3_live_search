@@ -111,27 +111,27 @@ class ControllerExtensionModulePsLiveSearch extends Controller
         $data['cancel'] = $this->url->link('marketplace/extension', 'user_token=' . $this->session->data['user_token'] . '&type=module', true);
 
         if (isset($this->request->post['module_ps_live_search_status'])) {
-            $data['module_ps_live_search_status'] = $this->request->post['module_ps_live_search_status'];
+            $data['module_ps_live_search_status'] = (bool) $this->request->post['module_ps_live_search_status'];
         } else {
-            $data['module_ps_live_search_status'] = $this->config->get('module_ps_live_search_status');
+            $data['module_ps_live_search_status'] = (bool) $this->config->get('module_ps_live_search_status');
         }
 
         if (isset($this->request->post['module_ps_live_search_input_delay'])) {
-            $data['module_ps_live_search_input_delay'] = $this->request->post['module_ps_live_search_input_delay'];
+            $data['module_ps_live_search_input_delay'] = (int) $this->request->post['module_ps_live_search_input_delay'];
         } else {
-            $data['module_ps_live_search_input_delay'] = $this->config->get('module_ps_live_search_input_delay');
+            $data['module_ps_live_search_input_delay'] = (int) $this->config->get('module_ps_live_search_input_delay');
         }
 
         if (isset($this->request->post['module_ps_live_search_input_min_chars'])) {
-            $data['module_ps_live_search_input_min_chars'] = $this->request->post['module_ps_live_search_input_min_chars'];
+            $data['module_ps_live_search_input_min_chars'] = (int) $this->request->post['module_ps_live_search_input_min_chars'];
         } else {
-            $data['module_ps_live_search_input_min_chars'] = $this->config->get('module_ps_live_search_input_min_chars');
+            $data['module_ps_live_search_input_min_chars'] = (int) $this->config->get('module_ps_live_search_input_min_chars');
         }
 
         if (isset($this->request->post['module_ps_live_search_product_status'])) {
-            $data['module_ps_live_search_product_status'] = $this->request->post['module_ps_live_search_product_status'];
+            $data['module_ps_live_search_product_status'] = (bool) $this->request->post['module_ps_live_search_product_status'];
         } else {
-            $data['module_ps_live_search_product_status'] = $this->config->get('module_ps_live_search_product_status');
+            $data['module_ps_live_search_product_status'] = (bool) $this->config->get('module_ps_live_search_product_status');
         }
 
         if (isset($this->request->post['module_ps_live_search_product_description'])) {
@@ -141,81 +141,81 @@ class ControllerExtensionModulePsLiveSearch extends Controller
         }
 
         if (isset($this->request->post['module_ps_live_search_product_description_length'])) {
-            $data['module_ps_live_search_product_description_length'] = $this->request->post['module_ps_live_search_product_description_length'];
+            $data['module_ps_live_search_product_description_length'] = (int) $this->request->post['module_ps_live_search_product_description_length'];
         } else {
-            $data['module_ps_live_search_product_description_length'] = $this->config->get('module_ps_live_search_product_description_length');
+            $data['module_ps_live_search_product_description_length'] = (int) $this->config->get('module_ps_live_search_product_description_length');
         }
 
         if (isset($this->request->post['module_ps_live_search_product_image'])) {
-            $data['module_ps_live_search_product_image'] = $this->request->post['module_ps_live_search_product_image'];
+            $data['module_ps_live_search_product_image'] = (bool) $this->request->post['module_ps_live_search_product_image'];
         } else {
-            $data['module_ps_live_search_product_image'] = $this->config->get('module_ps_live_search_product_image');
+            $data['module_ps_live_search_product_image'] = (bool) $this->config->get('module_ps_live_search_product_image');
         }
 
         if (isset($this->request->post['module_ps_live_search_product_image_width'])) {
-            $data['module_ps_live_search_product_image_width'] = $this->request->post['module_ps_live_search_product_image_width'];
+            $data['module_ps_live_search_product_image_width'] = (int) $this->request->post['module_ps_live_search_product_image_width'];
         } else {
-            $data['module_ps_live_search_product_image_width'] = $this->config->get('module_ps_live_search_product_image_width');
+            $data['module_ps_live_search_product_image_width'] = (int) $this->config->get('module_ps_live_search_product_image_width');
         }
 
         if (isset($this->request->post['module_ps_live_search_product_image_height'])) {
-            $data['module_ps_live_search_product_image_height'] = $this->request->post['module_ps_live_search_product_image_height'];
+            $data['module_ps_live_search_product_image_height'] = (int) $this->request->post['module_ps_live_search_product_image_height'];
         } else {
-            $data['module_ps_live_search_product_image_height'] = $this->config->get('module_ps_live_search_product_image_height');
+            $data['module_ps_live_search_product_image_height'] = (int) $this->config->get('module_ps_live_search_product_image_height');
         }
 
         if (isset($this->request->post['module_ps_live_search_category_status'])) {
-            $data['module_ps_live_search_category_status'] = $this->request->post['module_ps_live_search_category_status'];
+            $data['module_ps_live_search_category_status'] = (bool) $this->request->post['module_ps_live_search_category_status'];
         } else {
-            $data['module_ps_live_search_category_status'] = $this->config->get('module_ps_live_search_category_status');
+            $data['module_ps_live_search_category_status'] = (bool) $this->config->get('module_ps_live_search_category_status');
         }
 
         if (isset($this->request->post['module_ps_live_search_category_image'])) {
-            $data['module_ps_live_search_category_image'] = $this->request->post['module_ps_live_search_category_image'];
+            $data['module_ps_live_search_category_image'] = (bool) $this->request->post['module_ps_live_search_category_image'];
         } else {
-            $data['module_ps_live_search_category_image'] = $this->config->get('module_ps_live_search_category_image');
+            $data['module_ps_live_search_category_image'] = (bool) $this->config->get('module_ps_live_search_category_image');
         }
 
         if (isset($this->request->post['module_ps_live_search_category_image_width'])) {
-            $data['module_ps_live_search_category_image_width'] = $this->request->post['module_ps_live_search_category_image_width'];
+            $data['module_ps_live_search_category_image_width'] = (int) $this->request->post['module_ps_live_search_category_image_width'];
         } else {
-            $data['module_ps_live_search_category_image_width'] = $this->config->get('module_ps_live_search_category_image_width');
+            $data['module_ps_live_search_category_image_width'] = (int) $this->config->get('module_ps_live_search_category_image_width');
         }
 
         if (isset($this->request->post['module_ps_live_search_category_image_height'])) {
-            $data['module_ps_live_search_category_image_height'] = $this->request->post['module_ps_live_search_category_image_height'];
+            $data['module_ps_live_search_category_image_height'] = (int) $this->request->post['module_ps_live_search_category_image_height'];
         } else {
-            $data['module_ps_live_search_category_image_height'] = $this->config->get('module_ps_live_search_category_image_height');
+            $data['module_ps_live_search_category_image_height'] = (int) $this->config->get('module_ps_live_search_category_image_height');
         }
 
         if (isset($this->request->post['module_ps_live_search_manufacturer_status'])) {
-            $data['module_ps_live_search_manufacturer_status'] = $this->request->post['module_ps_live_search_manufacturer_status'];
+            $data['module_ps_live_search_manufacturer_status'] = (bool) $this->request->post['module_ps_live_search_manufacturer_status'];
         } else {
-            $data['module_ps_live_search_manufacturer_status'] = $this->config->get('module_ps_live_search_manufacturer_status');
+            $data['module_ps_live_search_manufacturer_status'] = (bool) $this->config->get('module_ps_live_search_manufacturer_status');
         }
 
         if (isset($this->request->post['module_ps_live_search_manufacturer_image'])) {
-            $data['module_ps_live_search_manufacturer_image'] = $this->request->post['module_ps_live_search_manufacturer_image'];
+            $data['module_ps_live_search_manufacturer_image'] = (bool) $this->request->post['module_ps_live_search_manufacturer_image'];
         } else {
-            $data['module_ps_live_search_manufacturer_image'] = $this->config->get('module_ps_live_search_manufacturer_image');
+            $data['module_ps_live_search_manufacturer_image'] = (bool) $this->config->get('module_ps_live_search_manufacturer_image');
         }
 
         if (isset($this->request->post['module_ps_live_search_manufacturer_image_width'])) {
-            $data['module_ps_live_search_manufacturer_image_width'] = $this->request->post['module_ps_live_search_manufacturer_image_width'];
+            $data['module_ps_live_search_manufacturer_image_width'] = (int) $this->request->post['module_ps_live_search_manufacturer_image_width'];
         } else {
-            $data['module_ps_live_search_manufacturer_image_width'] = $this->config->get('module_ps_live_search_manufacturer_image_width');
+            $data['module_ps_live_search_manufacturer_image_width'] = (int) $this->config->get('module_ps_live_search_manufacturer_image_width');
         }
 
         if (isset($this->request->post['module_ps_live_search_manufacturer_image_height'])) {
-            $data['module_ps_live_search_manufacturer_image_height'] = $this->request->post['module_ps_live_search_manufacturer_image_height'];
+            $data['module_ps_live_search_manufacturer_image_height'] = (int) $this->request->post['module_ps_live_search_manufacturer_image_height'];
         } else {
-            $data['module_ps_live_search_manufacturer_image_height'] = $this->config->get('module_ps_live_search_manufacturer_image_height');
+            $data['module_ps_live_search_manufacturer_image_height'] = (int) $this->config->get('module_ps_live_search_manufacturer_image_height');
         }
 
         if (isset($this->request->post['module_ps_live_search_information_status'])) {
-            $data['module_ps_live_search_information_status'] = $this->request->post['module_ps_live_search_information_status'];
+            $data['module_ps_live_search_information_status'] = (int) $this->request->post['module_ps_live_search_information_status'];
         } else {
-            $data['module_ps_live_search_information_status'] = $this->config->get('module_ps_live_search_information_status');
+            $data['module_ps_live_search_information_status'] = (int) $this->config->get('module_ps_live_search_information_status');
         }
 
         $data['text_contact'] = sprintf($this->language->get('text_contact'), self::EXTENSION_EMAIL, self::EXTENSION_EMAIL, self::EXTENSION_DOC);

@@ -213,9 +213,9 @@ class ControllerExtensionModulePsLiveSearch extends Controller
         }
 
         if (isset($this->request->post['module_ps_live_search_information_status'])) {
-            $data['module_ps_live_search_information_status'] = (int) $this->request->post['module_ps_live_search_information_status'];
+            $data['module_ps_live_search_information_status'] = (bool) $this->request->post['module_ps_live_search_information_status'];
         } else {
-            $data['module_ps_live_search_information_status'] = (int) $this->config->get('module_ps_live_search_information_status');
+            $data['module_ps_live_search_information_status'] = (bool) $this->config->get('module_ps_live_search_information_status');
         }
 
         $data['text_contact'] = sprintf($this->language->get('text_contact'), self::EXTENSION_EMAIL, self::EXTENSION_EMAIL, self::EXTENSION_DOC);

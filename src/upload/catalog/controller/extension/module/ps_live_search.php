@@ -3,7 +3,14 @@ class ControllerExtensionModulePsLiveSearch extends Controller
 {
     public function autocomplete()
     {
+        if (isset($this->request->get['search'])) {
+            $search = $this->request->get['search'];
+        } else {
+            $search = '';
+        }
+
         $json = array(
+            'query' => html_entity_decode($search, ENT_QUOTES, 'UTF-8'),
             'products' => array(
                 'status' => (bool) $this->config->get('module_ps_live_search_product_status'),
                 'data' => array()
@@ -21,12 +28,6 @@ class ControllerExtensionModulePsLiveSearch extends Controller
                 'data' => array()
             ),
         );
-
-        if (isset($this->request->get['search'])) {
-            $search = $this->request->get['search'];
-        } else {
-            $search = '';
-        }
 
         $this->load->model('extension/module/ps_live_search');
         $this->load->model('tool/image');

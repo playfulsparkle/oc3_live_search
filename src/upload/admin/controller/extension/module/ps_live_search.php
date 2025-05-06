@@ -307,6 +307,7 @@ class ControllerExtensionModulePsLiveSearch extends Controller
             'module_ps_live_search_product_image' => 1,
             'module_ps_live_search_product_image_width' => 64,
             'module_ps_live_search_product_image_height' => 64,
+            'module_ps_live_search_product_price' => 1,
             'module_ps_live_search_category_status' => 1,
             'module_ps_live_search_category_image' => 1,
             'module_ps_live_search_category_image_width' => 64,

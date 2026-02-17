@@ -2,35 +2,22 @@
 <!--
 This file is part of "Playful Sparkle - Live Search" project and subject to the terms
 and conditions defined in file "LICENSE", which is part of this source
-code package and also available on the project page: https://playfulsparkle.com/en-us/resources/downloads/
+code package and also available on the project page: https://github.com/playfulsparkle/oc3_live_search.git
 -->
 <modification>
     <name>Playful Sparkle - Live Search</name>
     <code>ps_live_search</code>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <author>Playful Sparkle</author>
-    <link>https://playfulsparkle.com/en-us/resources/downloads/</link>
+    <link>https://github.com/playfulsparkle/oc3_live_search.git</link>
     <file path="catalog/controller/common/header.php">
         <operation>
-            <search><![CDATA[$this->document->getScripts('header');]]></search>
-            <add position="after"><![CDATA[
-        $ps_live_search_script = 'catalog/view/javascript/ps_live_search.js';
-
-        $data['scripts'][$ps_live_search_script] = $ps_live_search_script;
-            ]]></add>
-        </operation>
-    </file>
-    <file path="catalog/controller/common/header.php">
-        <operation>
-            <search><![CDATA[$this->document->getStyles();]]></search>
-            <add position="after"><![CDATA[
-        $ps_live_search_style = 'catalog/view/theme/default/stylesheet/ps_live_search.css';
-
-        $data['styles'][$ps_live_search_style] = array(
-            'href' => $ps_live_search_style,
-            'rel' => 'stylesheet',
-            'media' => 'screen'
-        );
+            <search><![CDATA[$data['analytics'] = array();]]></search>
+            <add position="before"><![CDATA[
+                if ($this->config->get('module_ps_live_search_status')) {
+                    $this->document->addScript('catalog/view/javascript/ps_live_search.js');
+                    $this->document->addStyle('catalog/view/theme/default/stylesheet/ps_live_search.css');
+                }
             ]]></add>
         </operation>
     </file>
@@ -38,33 +25,35 @@ code package and also available on the project page: https://playfulsparkle.com/
         <operation>
             <search><![CDATA[$this->language->get('text_search');]]></search>
             <add position="after"><![CDATA[
-                $this->load->language('extension/module/ps_live_search', 'ps_live_search');
+                if ($this->config->get('module_ps_live_search_status')) {
+                    $this->load->language('extension/module/ps_live_search', 'ps_live_search');
 
-                $ps_language = $this->language->get('ps_live_search');
+                    $ps_language = $this->language->get('ps_live_search');
 
-                $data['heading_products'] = $ps_language->get('heading_products');
-                $data['heading_categories'] = $ps_language->get('heading_categories');
-                $data['heading_manufacturers'] = $ps_language->get('heading_manufacturers');
-                $data['heading_informations'] = $ps_language->get('heading_informations');
-                $data['text_showing_results'] = $ps_language->get('text_showing_results');
-                $data['text_all_product_results'] = $ps_language->get('text_all_product_results');
-                $data['text_no_results'] = $ps_language->get('text_no_results');
+                    $data['ps_heading_products'] = $ps_language->get('heading_products');
+                    $data['ps_heading_categories'] = $ps_language->get('heading_categories');
+                    $data['ps_heading_manufacturers'] = $ps_language->get('heading_manufacturers');
+                    $data['ps_heading_informations'] = $ps_language->get('heading_informations');
+                    $data['ps_text_showing_results'] = $ps_language->get('text_showing_results');
+                    $data['ps_text_all_product_results'] = $ps_language->get('text_all_product_results');
+                    $data['ps_text_no_results'] = $ps_language->get('text_no_results');
 
-                $data['input_delay'] = (int) $this->config->get('module_ps_live_search_input_delay');
-                $data['input_min_chars'] = (int) $this->config->get('module_ps_live_search_input_min_chars');
+                    $data['ps_input_delay'] = (int) $this->config->get('module_ps_live_search_input_delay');
+                    $data['ps_input_min_chars'] = (int) $this->config->get('module_ps_live_search_input_min_chars');
+                }
             ]]></add>
         </operation>
     </file>
     <file path="catalog/view/theme/default/template/common/search.twig">
         <operation>
-            <search position="after"><![CDATA[<div id="search" class="]]></search>
-            <add><![CDATA[<div id="search" class="ps-live-search-container ]]></add>
+            <search position="after"><![CDATA[id="search" class="]]></search>
+            <add><![CDATA[id="search" class="ps-live-search-container ]]></add>
         </operation>
     </file>
     <file path="catalog/view/theme/default/template/common/search.twig">
         <operation>
-            <search position="after"><![CDATA[<input type="text" name="search"]]></search>
-            <add><![CDATA[<input type="text" name="search" id="ps-live-search-input" data-live-search-target="ps-live-search"]]></add>
+            <search position="after"><![CDATA[name="search"]]></search>
+            <add><![CDATA[name="search" id="ps-live-search-input" data-live-search-target="ps-live-search"]]></add>
         </operation>
     </file>
     <file path="catalog/view/theme/default/template/common/search.twig">
@@ -85,17 +74,17 @@ code package and also available on the project page: https://playfulsparkle.com/
                         });
                     },
                     translations: {
-                        heading_products: '{{ heading_products }}',
-                        heading_categories: '{{ heading_categories }}',
-                        heading_manufacturers: '{{ heading_manufacturers }}',
-                        heading_informations: '{{ heading_informations }}',
-                        text_showing_results: '{{ text_showing_results }}',
-                        text_all_product_results: '{{ text_all_product_results }}',
-                        text_no_results: '{{ text_no_results }}',
+                        heading_products: '{{ ps_heading_products }}',
+                        heading_categories: '{{ ps_heading_categories }}',
+                        heading_manufacturers: '{{ ps_heading_manufacturers }}',
+                        heading_informations: '{{ ps_heading_informations }}',
+                        text_showing_results: '{{ ps_text_showing_results }}',
+                        text_all_product_results: '{{ ps_text_all_product_results }}',
+                        text_no_results: '{{ ps_text_no_results }}',
                     },
                     options: {
-                        input_delay: {{ input_delay | default(100) }},
-                        input_min_chars: {{ input_min_chars | default(1) }}
+                        input_delay: {{ ps_input_delay | default(100) }},
+                        input_min_chars: {{ ps_input_min_chars | default(1) }}
                     }
                 });
             </script>

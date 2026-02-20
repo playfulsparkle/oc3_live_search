@@ -1,10 +1,6 @@
 <?php
 // Heading
 $_['heading_title']                        = 'Playful Sparkle - Live Search';
-$_['heading_getting_started']              = 'Iniziare';
-$_['heading_setup']                        = 'Configurazione di Live Search';
-$_['heading_troubleshot']                  = 'Risoluzione dei problemi comuni';
-$_['heading_faq']                          = 'Domande frequenti';
 $_['heading_contact']                      = 'Contatta il supporto';
 
 // Text
@@ -12,10 +8,6 @@ $_['text_extension']                       = 'Estensioni';
 $_['text_success']                         = 'Successo: Hai modificato il modulo Live Search!';
 $_['text_filter_success']                  = 'Successo: I filtri non utilizzati sono stati rimossi con successo!';
 $_['text_edit']                            = 'Modifica il modulo Live Search';
-$_['text_getting_started']                 = '<p><strong>Panoramica:</strong> Playful Sparkle - Live Search è un\'estensione avanzata di ricerca per OpenCart 3.x, progettata per visualizzare dinamicamente i risultati di ricerca in un menu a discesa mentre l\'utente digita. Supporta la ricerca di prodotti, categorie, produttori e pagine informative, con opzioni personalizzabili per le dimensioni delle miniature, la lunghezza delle descrizioni e il ritardo di ricerca per migliorare l\'esperienza dell\'utente.</p><p><strong>Requisiti:</strong> OpenCart 3.x+, PHP 7.3</p>';
-$_['text_setup']                           = '<ul><li><strong>Impostazioni generali:</strong> Configura il ritardo dell\'input (predefinito: 100 ms) per determinare il tempo tra la digitazione dei caratteri e la visualizzazione dei risultati di ricerca.</li><li><strong>Impostazioni dei prodotti:</strong><ul><li>Abilita/Disabilita la ricerca di prodotti.</li><li>Abilita/Disabilita la visualizzazione delle descrizioni dei prodotti, con una lunghezza massima della descrizione (predefinita: 100 caratteri).</li><li>Abilita/Disabilita le miniature dei prodotti, con opzioni per larghezza e altezza delle miniature (min: 16 px, max: 128 px).</li></ul></li><li><strong>Impostazioni delle categorie:</strong><ul><li>Abilita/Disabilita la ricerca di categorie.</li><li>Abilita/Disabilita le miniature delle categorie, con dimensioni personalizzabili (min: 16 px, max: 128 px).</li></ul></li><li><strong>Impostazioni dei produttori:</strong><ul><li>Abilita/Disabilita la ricerca dei produttori.</li><li>Abilita/Disabilita le miniature dei produttori, con dimensioni personalizzabili (min: 16 px, max: 128 px).</li></ul></li><li><strong>Impostazioni delle pagine informative:</strong><ul><li>Abilita/Disabilita la ricerca delle pagine informative.</li></ul></li></ul>';
-$_['text_troubleshot']                     = '<ul><li><strong>La Ricerca Live non funziona:</strong> Prova ad aggiornare la cache delle modifiche, verifica il ritardo dell\'input e assicurati che il modulo sia abilitato.</li><li><strong>Mancano alcuni risultati (Prodotto, Categoria, Produttore, Pagine Informative):</strong> Verifica che la ricerca per ciascuna categoria di risultato sia abilitata nelle impostazioni.</li></ul>';
-$_['text_faq']                             = '<details><summary>Qual è il ritardo di input predefinito?</summary> Il ritardo di input predefinito è di 100 millisecondi.</details><details><summary>Come impostare la dimensione massima delle miniature?</summary> La dimensione delle miniature può essere regolata da 16 a 128 pixel di larghezza e altezza.</details><details><summary>Come limito la lunghezza della descrizione del prodotto?</summary> La lunghezza della descrizione del prodotto può essere impostata nelle impostazioni (predefinito: 100 caratteri).</details><details><summary>Perché alcuni risultati non appaiono nella ricerca a discesa?</summary> Assicurati che il tipo di risultato specifico (Prodotto, Categoria, Produttore o Pagina) sia abilitato nelle impostazioni del modulo.</details>';
 $_['text_contact']                         = '<p>Per ulteriore assistenza, contatta il nostro team di supporto:</p><ul><li><strong>Contatto:</strong> <a href="mailto:%s">%s</a></li><li><strong>Documentazione:</strong> <a href="%s" target="_blank" rel="noopener noreferrer">Documentazione utente</a></li></ul>';
 
 // Tab

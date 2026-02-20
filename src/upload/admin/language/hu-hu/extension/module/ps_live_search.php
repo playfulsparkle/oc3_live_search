@@ -1,10 +1,6 @@
 <?php
 // Heading
 $_['heading_title']                        = 'Playful Sparkle - Live Search';
-$_['heading_getting_started']              = 'Kezdő lépések';
-$_['heading_setup']                        = 'Live Search beállítása';
-$_['heading_troubleshot']                  = 'Gyakori hibakeresési lépések';
-$_['heading_faq']                          = 'GYIK';
 $_['heading_contact']                      = 'Terméktámogatás';
 
 // Text
@@ -12,10 +8,6 @@ $_['text_extension']                       = 'Bővítmények';
 $_['text_success']                         = 'Siker: A Live Search modul módosítása megtörtént!';
 $_['text_filter_success']                  = 'Siker: A felhasználatlan szűrők sikeresen eltávolítva!';
 $_['text_edit']                            = 'Live Search Modul szerkesztése';
-$_['text_getting_started']                 = '<p><strong>Áttekintés:</strong> A Playful Sparkle - Live Search egy fejlett kereső bővítmény az OpenCart 3.x számára, amely dinamikusan mutatja a keresési eredményeket egy legördülő menüben, miközben a felhasználó gépel. Támogatja a termékek, kategóriák, gyártók és információs oldalak keresését, testreszabható mini képméretekkel, leírás hosszúságokkal és késleltetési beállításokkal az optimális felhasználói élmény érdekében.</p><p><strong>Követelmények:</strong> OpenCart 3.x+, PHP 7.3</p>';
-$_['text_setup']                           = '<ul><li><strong>Általános beállítások:</strong> Állítsa be a bemeneti késleltetést (alapértelmezett: 100 ms), hogy vezérelje a billentyűleütések és a keresési eredmények megjelenítése közötti időt.</li><li><strong>Termékbeállítások:</strong><ul><li>A termék keresési eredmények engedélyezése/letiltása.</li><li>A termékleírások megjelenítésének engedélyezése/letiltása; állítsa be a maximális leírás hosszúságot (alapértelmezett: 100 karakter).</li><li>A termékek mini képeinek engedélyezése/letiltása; állítsa be a mini kép szélességét és magasságát (min: 16 px, max: 128 px).</li></ul></li><li><strong>Kategória beállítások:</strong><ul><li>A kategória keresési eredmények engedélyezése/letiltása.</li><li>A kategória mini képeinek engedélyezése/letiltása; állítsa be a mini képek méreteit (min: 16 px, max: 128 px).</li></ul></li><li><strong>Gyártói beállítások:</strong><ul><li>A gyártói keresési eredmények engedélyezése/letiltása.</li><li>A gyártói mini képek engedélyezése/letiltása; állítsa be a mini képek méreteit (min: 16 px, max: 128 px).</li></ul></li><li><strong>Információs oldal beállítások:</strong><ul><li>Az információs oldal keresési eredmények engedélyezése/letiltása.</li></ul></li></ul>';
-$_['text_troubleshot']                     = '<ul><li><strong>A keresés nem működik:</strong> Frissítse a módosítási gyorsítótárat, ellenőrizze a bemeneti késleltetési beállítást, és győződjön meg arról, hogy a modul engedélyezve van.</li><li><strong>Bizonyos eredmények (Termék, Kategória, Gyártó, Információ) hiányoznak:</strong> Ellenőrizze, hogy a megfelelő eredménykategória engedélyezve van-e a beállításokban.</li></ul>';
-$_['text_faq']                             = '<details><summary>Mi az alapértelmezett bemeneti késleltetés?</summary> Az alapértelmezett bemeneti késleltetés 100 milliszekundumra van beállítva.</details><details><summary>Hogyan állíthatom be a maximális mini kép méretet?</summary> A mini képek méretei 16 és 128 pixel között állíthatók be szélesség és magasság esetén.</details><details><summary>Hogyan korlátozhatom a termékleírás hosszúságát?</summary> A leírás hosszúsága a beállításokban állítható; az alapértelmezett 100 karakter.</details><details><summary>Miért nem jelennek meg bizonyos eredmények a legördülő menüben?</summary> Győződjön meg arról, hogy a konkrét eredménytípus (Termék, Kategória, Gyártó vagy Információ) engedélyezve van a modul beállításaiban.</details>';
 $_['text_contact']                         = '<p>További segítségért kérjük, lépjen kapcsolatba támogatási csapatunkkal:</p><ul><li><strong>Kapcsolat:</strong> <a href="mailto:%s">%s</a></li><li><strong>Dokumentáció:</strong> <a href="%s" target="_blank" rel="noopener noreferrer">Felhasználói dokumentáció</a></li></ul>';
 
 // Tab

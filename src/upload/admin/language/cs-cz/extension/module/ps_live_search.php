@@ -1,10 +1,6 @@
 <?php
 // Heading
 $_['heading_title']                        = 'Playful Sparkle - Live Search';
-$_['heading_getting_started']              = 'Začínáme';
-$_['heading_setup']                        = 'Nastavení Live Search';
-$_['heading_troubleshot']                  = 'Běžné řešení problémů';
-$_['heading_faq']                          = 'Často kladené otázky';
 $_['heading_contact']                      = 'Kontaktujte podporu';
 
 // Text
@@ -12,10 +8,6 @@ $_['text_extension']                       = 'Rozšíření';
 $_['text_success']                         = 'Úspěch: Modul Live Search byl upraven!';
 $_['text_filter_success']                  = 'Úspěch: Nepoužívané filtry byly úspěšně odstraněny!';
 $_['text_edit']                            = 'Upravit modul Live Search';
-$_['text_getting_started']                 = '<p><strong>Přehled:</strong> Playful Sparkle - Live Search je pokročlé rozšíření pro vyhledávání pro OpenCart 3.x, navržené tak, aby dynamicky zobrazovalo výsledky vyhledávání v rozevíracím seznamu, jakmile uživatel píše. Podporuje vyhledávání produktů, kategorií, výrobců a informačních stránek, s možnostmi přizpůsobení velikostí náhledů, délek popisů a nastavení zpoždění pro optimální uživatelskou zkušenost.</p><p><strong>Požadavky:</strong> OpenCart 3.x+, PHP 7.3</p>';
-$_['text_setup']                           = '<ul><li><strong>Obecná nastavení:</strong> Nakonfigurujte zpoždění vstupu (výchozí: 100 ms), abyste ovládali čas mezi stisky kláves a zobrazením výsledků vyhledávání.</li><li><strong>Nastavení produktů:</strong><ul><li>Aktivovat/Deaktivovat výsledky vyhledávání produktů.</li><li>Aktivovat/Deaktivovat zobrazení popisů produktů; nastavte maximální délku popisu (výchozí: 100 znaků).</li><li>Aktivovat/Deaktivovat náhledy produktů; nastavte šířku a výšku náhledů (min: 16 px, max: 128 px).</li></ul></li><li><strong>Nastavení kategorií:</strong><ul><li>Aktivovat/Deaktivovat výsledky vyhledávání kategorií.</li><li>Aktivovat/Deaktivovat náhledy kategorií; nastavte rozměry náhledů (min: 16 px, max: 128 px).</li></ul></li><li><strong>Nastavení výrobců:</strong><ul><li>Aktivovat/Deaktivovat výsledky vyhledávání výrobců.</li><li>Aktivovat/Deaktivovat náhledy výrobců; nastavte rozměry náhledů (min: 16 px, max: 128 px).</li></ul></li><li><strong>Nastavení informačních stránek:</strong><ul><li>Aktivovat/Deaktivovat výsledky vyhledávání informačních stránek.</li></ul></li></ul>';
-$_['text_troubleshot']                     = '<ul><li><strong>Živé vyhledávání nefunguje:</strong> Obnovte cache modifikace, ověřte nastavení zpoždění vstupu a ujistěte se, že je modul aktivován.</li><li><strong>Konkrétní výsledky (Produkt, Kategória, Výrobce, Informace) chybí:</strong> Potvrďte, že je v nastaveních povolena příslušná kategorie výsledků.</li></ul>';
-$_['text_faq']                             = '<details><summary>Jaké je výchozí zpoždění vstupu?</summary> Výchozí zpoždění vstupu je nastaveno na 100 milisekund.</details><details><summary>Jak nastavím maximální velikost náhledů?</summary> Velikosti náhledů lze nastavit v rozmezí od 16 do 128 pixelů pro šířku a výšku.</details><details><summary>Jak omezím délku popisu produktu?</summary> Délka popisu může být upravena v nastaveních; výchozí hodnota je 100 znaků.</details><details><summary>Proč se některé výsledky nezobrazují v rozevíracím seznamu?</summary> Ujistěte se, že je konkrétní typ výsledku (Produkt, Kategória, Výrobce nebo Informace) povolen v nastavení modulu.</details>';
 $_['text_contact']                         = '<p>Pro další pomoc se prosím obraťte na náš tým podpory:</p><ul><li><strong>Kontakt:</strong> <a href="mailto:%s">%s</a></li><li><strong>Dokumentace:</strong> <a href="%s" target="_blank" rel="noopener noreferrer">Dokumentace pro uživatele</a></li></ul>';
 
 // Tab

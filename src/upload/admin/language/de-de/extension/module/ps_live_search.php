@@ -1,10 +1,6 @@
 <?php
 // Heading
 $_['heading_title']                        = 'Playful Sparkle - Live Search';
-$_['heading_getting_started']              = 'Erste Schritte';
-$_['heading_setup']                        = 'Einrichtung des Live Search';
-$_['heading_troubleshot']                  = 'Häufige Fehlersuche';
-$_['heading_faq']                          = 'Häufig gestellte Fragen';
 $_['heading_contact']                      = 'Support kontaktieren';
 
 // Text
@@ -12,10 +8,6 @@ $_['text_extension']                       = 'Erweiterungen';
 $_['text_success']                         = 'Erfolg: Sie haben das Live Search-Modul erfolgreich geändert!';
 $_['text_filter_success']                  = 'Erfolg: Nicht verwendete Filter wurden erfolgreich entfernt!';
 $_['text_edit']                            = 'Live Search-Modul bearbeiten';
-$_['text_getting_started']                 = '<p><strong>Übersicht:</strong> Playful Sparkle - Live Search ist eine fortschrittliche Sucherweiterung für OpenCart 3.x, die entwickelt wurde, um Suchergebnisse dynamisch in einem Dropdown anzuzeigen, während der Benutzer tippt. Sie unterstützt Suchen nach Produkten, Kategorien, Herstellern und Informationsseiten, mit anpassbaren Thumbnail-Größen, Beschreibungslängen und Verzögerungseinstellungen für ein optimales Benutzererlebnis.</p><p><strong>Voraussetzungen:</strong> OpenCart 3.x+, PHP 7.3</p>';
-$_['text_setup']                           = '<ul><li><strong>Allgemeine Einstellungen:</strong> Konfigurieren Sie die Eingabeverzögerung (Standard: 100 ms), um die Zeit zwischen den Tastenanschlägen und der Anzeige der Suchergebnisse zu steuern.</li><li><strong>Produkteinstellungen:</strong><ul><li>Aktivieren/Deaktivieren von Produktsuchergebnissen.</li><li>Aktivieren/Deaktivieren der Anzeige von Produktbeschreibungen; maximaler Beschreibungslänge festlegen (Standard: 100 Zeichen).</li><li>Aktivieren/Deaktivieren von Produkt-Thumbnails; Thumbnail-Breite und -Höhe festlegen (min: 16 px, max: 128 px).</li></ul></li><li><strong>Kategorieeinstellungen:</strong><ul><li>Aktivieren/Deaktivieren von Kategoriesuchergebnissen.</li><li>Aktivieren/Deaktivieren von Kategorietumbnails; Thumbnail-Abmessungen festlegen (min: 16 px, max: 128 px).</li></ul></li><li><strong>Hersteller-Einstellungen:</strong><ul><li>Aktivieren/Deaktivieren von Herstellersuchergebnissen.</li><li>Aktivieren/Deaktivieren von Hersteller-Thumbnails; Thumbnail-Abmessungen festlegen (min: 16 px, max: 128 px).</li></ul></li><li><strong>Informationen Seiteneinstellungen:</strong><ul><li>Aktivieren/Deaktivieren von Informationsseitensuchergebnissen.</li></ul></li></ul>';
-$_['text_troubleshot']                     = '<ul><li><strong>Live-Suche funktioniert nicht:</strong> Aktualisieren Sie den Änderungs-Cache, überprüfen Sie die Eingabeverzögerungseinstellung und stellen Sie sicher, dass das Modul aktiviert ist.</li><li><strong>Bestimmte Ergebnisse (Produkt, Kategorie, Hersteller, Informationen) fehlen:</strong> Bestätigen Sie, dass die entsprechende Ergebnis-Kategorie in den Einstellungen aktiviert ist.</li></ul>';
-$_['text_faq']                             = '<details><summary>Was ist die Standard-Eingabeverzögerung?</summary> Die Standard-Eingabeverzögerung ist auf 100 Millisekunden eingestellt.</details><details><summary>Wie stelle ich die maximale Thumbnail-Größe ein?</summary> Die Thumbnail-Größen können im Bereich von 16 bis 128 Pixeln für Breite und Höhe festgelegt werden.</details><details><summary>Wie begrenze ich die Länge der Produktbeschreibung?</summary> Die Beschreibungslänge kann in den Einstellungen angepasst werden; der Standardwert beträgt 100 Zeichen.</details><details><summary>Warum werden einige Ergebnisse nicht im Dropdown angezeigt?</summary> Stellen Sie sicher, dass der spezifische Ergebnistyp (Produkt, Kategorie, Hersteller oder Informationen) in den Moduleinstellungen aktiviert ist.</details>';
 $_['text_contact']                         = '<p>Für weitere Unterstützung wenden Sie sich bitte an unser Support-Team:</p><ul><li><strong>Kontakt:</strong> <a href="mailto:%s">%s</a></li><li><strong>Dokumentation:</strong> <a href="%s" target="_blank" rel="noopener noreferrer">Benutzerdokumentation</a></li></ul>';
 
 // Tab

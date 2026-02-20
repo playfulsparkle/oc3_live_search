@@ -8,7 +8,7 @@ $_['text_extension']                       = 'Extensiones';
 $_['text_success']                         = 'Éxito: ¡Has modificado el módulo de Búsqueda en Vivo!';
 $_['text_filter_success']                  = 'Éxito: ¡Los filtros no utilizados fueron eliminados correctamente!';
 $_['text_edit']                            = 'Editar módulo de Búsqueda en Vivo';
-$_['text_contact']                         = '<p>Para más asistencia, por favor contacta con nuestro equipo de soporte:</p><ul><li><strong>Contacto:</strong> <a href="mailto:%s">%s</a></li><li><strong>Documentación:</strong> <a href="%s" target="_blank" rel="noopener noreferrer">Documentación de Usuario</a></li></ul>';
+$_['text_contact']                         = '<p>Para obtener más ayuda, por favor contacta a nuestro equipo de soporte:</p><ul><li><strong>Contacto:</strong> <a href="mailto:%s">%s</a></li><li><strong>Documentación:</strong> <a href="%s" target="_blank" rel="noopener noreferrer">Documentación para el Usuario</a></li></ul>';
 
 // Tab
 $_['tab_general']                          = 'General';

@@ -2,14 +2,14 @@
 <!--
 This file is part of "Playful Sparkle - Live Search" project and subject to the terms
 and conditions defined in file "LICENSE", which is part of this source
-code package and also available on the project page: https://github.com/playfulsparkle/oc3_live_search.git
+code package and also available on the project page: https://github.com/playfulsparkle/oc3_live_search
 -->
 <modification>
     <name>Playful Sparkle - Live Search</name>
     <code>ps_live_search</code>
     <version>1.0.5</version>
     <author>Playful Sparkle</author>
-    <link>https://github.com/playfulsparkle/oc3_live_search.git</link>
+    <link>https://github.com/playfulsparkle/oc3_live_search</link>
     <file path="catalog/controller/common/header.php">
         <operation>
             <search><![CDATA[$data['analytics'] = array();]]></search>
